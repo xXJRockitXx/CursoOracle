@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<input /> 
+<button>Buebos</button>
+
+<script>
+    function salto(i) {
+        for (let index = 0; index < i; index++) {
+            document.write("<br>");
+        }
+    }
+
+    function imprimir(texto) {
+        document.write(texto);
+        salto(1);
+    }
+
+    var secreto = 5;
+    var input = document.querySelector("input");
+
+    function verficar() {
+
+        if (secreto == parseInt(input.value)) {
+            alert("10/10 y God");
+        }
+        else {
+            alert("0/10 y Zzz");
+        }
+
+        // Limpiamos el campo
+        input.value = "";
+        // Enfocamos el cursor en la casilla
+        input.focus();
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verficar; // Al no tener parametros, no colocar parentesis xd
+</script>

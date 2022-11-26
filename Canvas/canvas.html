@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400">
+
+</canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    // Primero determinamos colores antes de pintar xd
+    pincel.fillStyle = "lightgrey";
+    // El eje Y del canvas para abajo, comienza arriba a la izquierda. 
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle = "green";
+    pincel.fillRect(0, 0, 200, 400);
+
+    pincel.fillStyle = "red";
+    pincel.fillRect(400, 0, 200, 400);
+
+    // Toca dibujar
+    pincel.fillStyle = "yellow";
+    pincel.beginPath(); // Iniciamos un camino
+    pincel.moveTo(300, 200); // Lo movemos al centro, 300 eje X, 200 eje Y
+    pincel.lineTo(200, 400); // Dibujamos una linea
+    pincel.lineTo(400, 400);
+    pincel.fill(); //Rellenamos
+
+    pincel.fillStyle = "blue";
+    pincel.beginPath(); 
+    pincel.arc(300, 200, 50, 0, 2 * 3.14); // Para graficar circunferencias: x, y, r, angulo inicial, angulo final (2pi)
+    pincel.fill(); 
+
+</script>
